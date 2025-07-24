@@ -1,29 +1,20 @@
-# 🔍 Shadow IT Scanner & Risk Mapper
+#  Shadow IT Scanner & Risk Mapper
 
-A Python-based tool to autonomously discover and assess exposed infrastructure (subdomains, ports, technologies) tied to a company domain. Designed for cybersecurity interns or professionals working in environments without a dedicated security team.
+A simple Python tool that discovers exposed subdomains, checks if they’re online, identifies technologies used, and assigns risk levels. It helps detect forgotten or misconfigured assets (Shadow IT) in any organization.
 
-## Features
+---
 
-- Subdomain enumeration via `crt.sh`
-- Alive check & open port scan using `httpx`
-- Technology fingerprinting (optional)
-- Basic risk scoring per subdomain
-- Generates Markdown risk report
+##  Features
 
-## Requirements
+- Subdomain enumeration (with fallback)
+- Live host detection
+- Technology fingerprinting (CMS, frameworks, etc.)
+- Risk scoring based on exposure
+- Markdown report generation
 
-- Python 3.8+
-- Internet access
-- (Optional) Tools: `subfinder`, `nmap`, `nuclei`, `gowitness`
+---
 
-## Setup
+##  Example Use
 
 ```bash
-pip install -r requirements.txt
-```
-
-## How use?
-
-```bash
-python main.py --domain example.com  
-```
+python main.py --domain example.com
